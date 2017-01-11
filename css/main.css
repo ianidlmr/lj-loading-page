@@ -1,0 +1,75 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+#first {
+  max-width: 100%;
+  width: 100px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+@keyframes hideshow {
+  0% { opacity: 1; }
+  10% { opacity: 0; }
+  15% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#first .big {
+  animation: hideshow 4s ease infinite;
+}
+
+#first .small {
+  animation: hideshow 4s ease infinite;
+  animation-delay: 0.2s;
+}
+
+#second {
+  max-width: 100%;
+  width: 100px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#second .big {
+  stroke-dasharray: 650;
+  /*stroke-dashoffset: 1000;*/
+  animation: dash 4s linear alternate infinite;
+}
+
+#second .small {
+  stroke-dasharray: 450;
+  animation: dash 4s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#third {
+  max-width: 100%;
+  width: 100px;
+  position: absolute;
+  top: 20px;
+  left: 220px;
+}
