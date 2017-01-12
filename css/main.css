@@ -24,8 +24,7 @@ html {
 
 @keyframes hideshow {
   0% { opacity: 1; }
-  10% { opacity: 0; }
-  15% { opacity: 0; }
+  50% { opacity: 0; }
   100% { opacity: 1; }
 }
 
@@ -66,10 +65,249 @@ html {
   }
 }
 
+line {
+  stroke-width: 2;
+}
+
 #third {
   max-width: 100%;
-  width: 100px;
+  height: 100px;
+  max-height: 100%;
   position: absolute;
   top: 20px;
   left: 220px;
+  /*opacity: 0;*/
+  animation: hideshow 3s ease infinite;
+}
+
+#third .big {
+  stroke-dasharray: 650;
+  animation: dash 4s linear alternate infinite;
+}
+
+#third .small {
+  stroke-dasharray: 400;
+  animation: dash 4s linear alternate infinite;
+}
+
+#groundsone {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 20px;
+  left: 243px;
+  height: 100px;
+  animation: hideshow 4s ease infinite;
+  animation-delay: 2s;
+}
+
+#groundsone g .rect {
+  stroke-dasharray: 800;
+  animation: hideshow 4s ease infinite;
+  animation: dash 4s linear alternate infinite;
+}
+
+
+#terraceone {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 20px;
+  left: 172px;
+  height: 100px;
+  opacity: 0;
+}
+
+#groundstwo {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 20px;
+  left: 400px;
+  height: 100px;
+  /*opacity: 0;*/
+}
+
+@keyframes fade {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes translatex {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-40px);}
+}
+
+#groundstwo .line1  .square1 {
+  animation: fade 4.5s ease infinite;
+}
+
+#groundstwo .line1 .square2, #groundstwo .line2 .square1 {
+  animation: fade 4.5s ease infinite;
+  animation-delay: 0.57s;
+}
+
+#groundstwo .line1 .square3, #groundstwo .line2 .square2, #groundstwo .line3 .square1 {
+  animation: fade 4.5s ease infinite;
+  animation-delay: 1.14s;
+}
+
+#groundstwo .line1 .square4, #groundstwo .line2 .square3, #groundstwo .line3 .square2, #groundstwo .line4 .square1 {
+  animation: fade 4.5s ease infinite;
+  animation-delay: 1.71s;
+}
+
+#groundstwo .line2 .square4, #groundstwo .line3 .square3, #groundstwo .line4 .square2 {
+  animation: fade 4.5s ease infinite;
+  animation-delay: 2.28s;
+}
+
+#groundstwo .line3 .square4, #groundstwo .line4 .square3 {
+  animation: fade 4.5s ease infinite;
+  animation-delay: 2.85s;
+}
+
+#groundstwo .line4 .square4 {
+  animation: fade 4.5s ease infinite;
+  animation-delay: 3.42s;
+}
+
+#groundsthree {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  height: 100px;
+}
+
+#groundsthree .square4 {
+  animation: fade 4.5s ease infinite;
+}
+
+#groundsthree .square3 {
+  animation: fade 4.5s ease infinite;
+  animation-delay: 0.5s;
+}
+
+#groundsthree .square2 {
+  animation: fade 4.5s ease infinite;
+  animation-delay: 1s;
+}
+
+#groundsthree .square1 {
+  animation: fade 4.5s ease infinite;
+  animation-delay: 1.5s;
+}
+
+#groundsthree g .rect {
+  stroke-dasharray: 500;
+  animation: dash 8s linear infinite;
+}
+
+#groundsfour {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 150px;
+  left: 250px;
+  height: 100px;
+}
+
+#terracefour {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 165px;
+  left: 224px;
+  height: 65px;
+}
+
+#junctionfour {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 150px;
+  left: 250px;
+  height: 100px;
+}
+
+@keyframes fade_and_trace {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 1;
+    /*transform: rotate(5deg);*/
+  }
+  25%{
+  opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fade_and_trace_two {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+    /*transform: rotate(5deg);*/
+  }
+  25%{
+  opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fade_and_trace_three {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+    /*transform: rotate(5deg);*/
+  }
+  25%{
+  opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+
+#groundsfour line, #groundsfour g {
+  stroke-dasharray: 300;
+  animation: fade_and_trace 10s linear infinite;
+}
+
+#terracefour line, #terracefour polyline, #terracefour polygon, #terracefour rect {
+  stroke-dasharray: 500;
+  animation: fade_and_trace_two 10s linear infinite;
+}
+
+#junctionfour g, #junctionfour polygon {
+  stroke-dasharray: 600;
+  animation: fade_and_trace_three 10s linear infinite;
 }
